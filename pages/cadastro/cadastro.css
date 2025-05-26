@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url('img/mapa-hopi-hari-melhorado\ \(1\).jpeg');
+    background-image: url(mapa-hopi.jpeg);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -27,23 +27,23 @@ body::before {
     z-index: 1;
 }
 
-.login-container {
+.register-container {
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 40px;
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     position: relative;
     z-index: 2;
 }
 
-.login-logo {
+.register-logo {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
-.login-logo img {
+.register-logo img {
     width: 180px;
     height: auto;
 }
@@ -51,12 +51,19 @@ body::before {
 h1 {
     color: #FF6B00;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     font-size: 28px;
 }
 
+.input-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
 .input-group {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    flex: 1;
 }
 
 .input-group label {
@@ -80,32 +87,22 @@ h1 {
     outline: none;
 }
 
-.remember-forgot {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    font-size: 14px;
+.input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+    background-color: white;
 }
 
-.remember {
-    display: flex;
-    align-items: center;
+.input-group select:focus {
+    border-color: #FF6B00;
+    outline: none;
 }
 
-.remember input {
-    margin-right: 5px;
-}
-
-.forgot a {
-    color: #FF6B00;
-    text-decoration: none;
-}
-
-.forgot a:hover {
-    text-decoration: underline;
-}
-
-.login-btn {
+.register-btn {
     background-color: #FF6B00;
     color: white;
     border: none;
@@ -116,31 +113,37 @@ h1 {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-top: 10px;
 }
 
-.login-btn:hover {
+.register-btn:hover {
     background-color: #E05A00;
 }
 
-.register {
+.login-link {
     margin-top: 20px;
     text-align: center;
     font-size: 14px;
 }
 
-.register a {
+.login-link a {
     color: #FF6B00;
     text-decoration: none;
     font-weight: bold;
 }
 
-.register a:hover {
+.login-link a:hover {
     text-decoration: underline;
 }
 
-@media (max-width: 480px) {
-    .login-container {
+@media (max-width: 600px) {
+    .register-container {
         padding: 20px;
         margin: 0 15px;
+    }
+    
+    .input-row {
+        flex-direction: column;
+        gap: 0;
     }
 }

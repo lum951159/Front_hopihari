@@ -7,14 +7,13 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('user-name').textContent = `Olá, ${userData.firstName}!`;
         document.getElementById('user-email').textContent = userData.email;
     } else {
-        // Redirecionar para a página de login se não houver usuário
         window.location.href = '../login/login.html';
     }
     
     // Botão de logout
     document.getElementById('logout-btn').addEventListener('click', function() {
         localStorage.removeItem('token');
-        window.location.href = '/';
+        window.location.href = '../login/login.html';
     });
     
     // Toggle do menu lateral (para mobile)

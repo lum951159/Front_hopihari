@@ -41,9 +41,9 @@
         <div class="profile-content display-mode">
             <!-- Seção de Foto de Perfil -->
             <div class="avatar-section">
-                <img src="https://via.placeholder.com/150" alt="Foto de Perfil" class="avatar">
+                <img id="profile-image" src="https://via.placeholder.com/150" alt="Foto de Perfil" class="avatar">
                 <div class="edit-mode">
-                    <input type="file" accept="image/*">
+                    <input id="image-upload" type="file" accept="image/*">
                 </div>
             </div>
 
@@ -73,7 +73,7 @@
 
                 <!-- Botões de Ação -->
                 <div class="buttons">
-                    <label for="edit-toggle" class="edit-btn display-mode">Editar Perfil</label>
+                    <label for="edit-toggle" class="edit-btn display-mode" href="perfileditado.html">Editar Perfil</label>
                     <div class="edit-mode">
                         <button type="submit" class="save-btn">Salvar</button>
                         <label for="edit-toggle" class="cancel-btn">Cancelar</label>

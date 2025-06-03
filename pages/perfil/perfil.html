@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - Hopi Hari</title>
+    <link rel="stylesheet" href="../perfil/perfil.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="../../img/img/logo-removebg-preview.png" alt="Logo Hopi Hari">
+                </div>
+                <div class="user-menu">
+                    <div class="user-info">
+                        <div class="user-name" id="user-name">Olá, Luiz Boas!</div>
+                        <div class="user-email" id="user-email"></div>
+                    </div>
+                    <form action="../dashboard/dashboard.html">
+                        <button type="submit" class="logout-btn">Voltar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="floating-text">
+        <span class="letter">P</span>
+        <span class="letter">E</span>
+        <span class="letter">R</span>
+        <span class="letter">F</span>
+        <span class="letter">I</span>
+        <span class="letter">L</span>
+    </div>
+
+    <div class="profile-container">
+        <input type="checkbox" id="edit-toggle" style="display: none;">
+        <div class="profile-content display-mode">
+            <!-- Seção de Foto de Perfil -->
+            <div class="avatar-section">
+                <img src="https://via.placeholder.com/150" alt="Foto de Perfil" class="avatar">
+                <div class="edit-mode">
+                    <input type="file" accept="image/*">
+                </div>
+            </div>
+
+            <!-- Seção de Informações -->
+            <div class="info-section">
+                <h2>Seu Perfil no Hopi Hari</h2>
+                <div class="field">
+                    <label>Nome</label>
+                    <p class="display-mode">Luiz Boas</p>
+                    <input type="text" value="João Silva" class="edit-mode">
+                </div>
+                <div class="field">
+                    <label>E-mail</label>
+                    <p class="display-mode">Luizboas@gmail.com</p>
+                    <input type="email" value="joao.silva@example.com" class="edit-mode">
+                </div>
+                <div class="field">
+                    <label>Telefone</label>
+                    <p class="display-mode">(11) 98765-4321</p>
+                    <input type="tel" value="(11) 98765-4321" class="edit-mode">
+                </div>
+                <div class="field">
+                    <label>Última Visita</label>
+                    <p class="display-mode">22 / 05 / 2025</p>
+                    
+                </div>
+
+                <!-- Botões de Ação -->
+                <div class="buttons">
+                    <label for="edit-toggle" class="edit-btn display-mode">Editar Perfil</label>
+                    <div class="edit-mode">
+                        <button type="submit" class="save-btn">Salvar</button>
+                        <label for="edit-toggle" class="cancel-btn">Cancelar</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        © 2025 Parque Hopi Hari - Sistema de Gerenciamento de Filas
+    </div>
+
+  
+</body>
+</html>

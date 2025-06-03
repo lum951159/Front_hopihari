@@ -18,11 +18,11 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
         });
         
         const data = await response.json();
-        
+        console.log(data);
         if (response.ok) {
             // Salvar dados do usuário no localStorage (para demonstração)
             localStorage.setItem('token', JSON.stringify(data.token));
-            localStorage.setItem('user', JSON.stringify(data.user));       // 2
+            localStorage.setItem('user', JSON.stringify(data.Resultado[0]));       // 2
             
             // Redirecionar para a página principal (após login bem-sucedido)
             alert('Login realizado com sucesso!');

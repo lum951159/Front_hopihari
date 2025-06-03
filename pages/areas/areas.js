@@ -1,14 +1,31 @@
-document.addEventListener('DOMContentLoaded', async function() {
-    const area = "Mistieri";
-    const token = localStorage.getItem('token');
-    const response = await fetch(`http://localhost:3000/areas/${area}`, {
+document.addEventListener('DOMContentLoaded', async function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const area = urlParams.get('area').trim(); // Remove espaços extras
+    const token = JSON.parse(localStorage.getItem('token').replaceAll("", ''));
+    const response = await fetch(`http://localhost:3000/brinquedos/area/${area}`, {
         method: 'GET',
-        readers: {
+        headers: {    
             'Content-Type': 'application/json',
+            'Authorization': `Bearer ` + token
         },
-        authorization: `Bearer` + token
-        });
+    });
+    const data = await response.json();
+    console.log(data);
 
-        const data = await response.json();
+    for (var brinquedo of data.Resultado) {
+        console.log(brinquedo);
 
+        const grid = document.querySelector('.rides-grid');
+        grid.innerHTML = grid.innerHTML +
+        `
+        <div class="ride-card">
+            <div class="ride-image" style="background-image: url('../dashboard/img/teatro.png')"></div>
+            <div class="ride-info">
+                <h3 class="ride-name">${brinquedo.name}</h3>
+                <div class="ride-time"> ${brinquedo.waiting_time} min</div>
+                <span class="ride-status status-open"> ${brinquedo.status}</span>
+            </div>
+        </div>
+        `;
+    }
 });
